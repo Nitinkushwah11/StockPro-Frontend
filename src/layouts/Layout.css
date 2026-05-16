@@ -1,0 +1,111 @@
+.sidebar {
+  min-width: 240px;
+  max-width: 240px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: #1a1d21;
+  color: #fff;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 4px 12px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.sidebar .nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+}
+
+.sidebar .nav-link.active {
+  color: #fff;
+  background: linear-gradient(135deg, #0d6efd 0%, #004dc0 100%);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content-wrapper {
+  padding: 1.5rem 2rem;
+  flex: 1;
+}
+
+@media (min-width: 1600px) {
+  .content-wrapper {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar {
+    min-width: 80px;
+    max-width: 80px;
+  }
+  .sidebar .nav-text {
+    display: none;
+  }
+  .sidebar .nav-link {
+    justify-content: center;
+    padding: 15px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 70px;
+    min-height: 70px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .sidebar .nav-link {
+    margin: 0;
+    flex: 1;
+    border-radius: 0;
+    height: 100%;
+    transform: none !important;
+  }
+  .sidebar-header {
+    display: none;
+  }
+  .main-content {
+    margin-bottom: 70px;
+  }
+}
+
+.navbar {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  background: #fff;
+  border-bottom: 1px solid #edf2f7;
+}
