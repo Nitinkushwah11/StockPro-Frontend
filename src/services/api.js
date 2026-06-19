@@ -2,7 +2,8 @@ import axios from 'axios';
 
 // All requests go through the API Gateway (single entry point)
 // The gateway routes by path: /products/** → product-service, /warehouse/** → warehouse-service, etc.
-const API_GATEWAY = 'http://localhost:8080';
+const API_GATEWAY = 'http://13.49.19.60:8080';
+
 
 const apiClient = axios.create({
     baseURL: API_GATEWAY,
